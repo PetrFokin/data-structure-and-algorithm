@@ -2,6 +2,19 @@ package queue.array;
 
 import java.util.Arrays;
 
+/**
+ * Queue is an abstract liner data structure. Where all elements are ordered by FIFO.
+ * Time complexity:
+ * - Insertion O(1)
+ * - Access O(1)
+ * - Deletion O(1)
+ * When use:
+ * - Get things out in the order that you put them in.
+ * Examples:
+ * - Traversing tree/graph - breadth-first walk.
+ *
+ * This implementation is based on array data structure.
+ */
 public class Queue<T> {
 
     private Object[] arr;

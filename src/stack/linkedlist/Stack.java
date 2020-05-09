@@ -2,6 +2,20 @@ package stack.linkedlist;
 
 import static java.lang.String.valueOf;
 
+/**
+ * Stack is abstract liner data structure. Where all elements are ordered by LIFO.
+ * Time complexity:
+ * - Insertion O(1)
+ * - Access O(1)
+ * - Deletion O(1)
+ * When use:
+ * - Get things out in the reverse order than you put them in.
+ * Examples:
+ * - Traversing the tree/graph - Depth-first walk.
+ * - Runtime memory management (Java Stack).
+ * <p>
+ * This implementation is based on linked list data structure.
+ */
 public class Stack<T> {
 
     private Node<T> head = null;

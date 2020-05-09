@@ -3,7 +3,6 @@ package algorithm;
 public class BubbleSort {
 
     public static void sort(int[] arr) {
-        int k;
         boolean sorted = false;
         for (int i = 0; i < arr.length - 1; i++) {
             if (sorted)

@@ -1,5 +1,21 @@
 import java.util.Arrays;
 
+/**
+ * Array is a physical linear data structure.
+ * <p>
+ * Time complexity:
+ * - Insertion at the beginning O(n)
+ * - Insertion at the middle O(n)
+ * - Insertion at the end O(1)
+ * - Access by index from either position O(1)
+ * - Search element O(n)
+ * - Deletion O(n)
+ * <p>
+ * When to use:
+ * - Need access the elements using the index.
+ * - Know the size of the array before defining the memory.
+ * - Array takes less memory compare than linked list.
+ */
 public class Array<T> {
     private final Object[] arr;
 

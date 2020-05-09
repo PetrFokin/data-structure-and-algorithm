@@ -1,5 +1,25 @@
 import static java.lang.String.valueOf;
 
+/**
+ * Linked list is a physical linear data structure.
+ * Linked list consists from nodes where each node has link to the next node and link to the value.
+ * <p>
+ * Time complexity:
+ * - Insertion at the beginning O(1)
+ * - Insertion at the middle O(n)
+ * - Insertion at the end O(1)
+ * - Access element from random position O(n)
+ * - Access element from head O(1)
+ * - Access element from tail O(1)
+ * - Search element O(n)
+ * - Deletion: random: O(n), head O(1), tail O(1)
+ * <p>
+ * When to use:
+ * - When the developer needs constant time for insertion and deletion.
+ * - When the data dynamically grows.
+ * - Do not access random elements from the linked list.
+ * - Insert the element in any position of the list.
+ */
 public class LinkedList<T> {
 
     private Node<T> head = null;
@@ -96,7 +116,6 @@ public class LinkedList<T> {
         size--;
         return node.value;
     }
-
 
 
     private Node<T> findFromHead(int index) {

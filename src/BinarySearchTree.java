@@ -1,10 +1,19 @@
-
-
-import java.util.ArrayDeque;
-import java.util.Queue;
-
 import static java.lang.String.valueOf;
 
+/**
+ * Binary search tree is a abstract not liner data structure. Tree consists from root, nodes and leafs.
+ * Nodes contain link to the right sub tree or leaf and link to left sub tree or leaf.
+ * Leaf is a node which doesn't have sub trees.
+ * <p>
+ * Time complexity:
+ * - insertion: worst case O(n), average O(log(n))
+ * - access: worst case O(n), average O(log(n))
+ * - search: worst case O(n), average O(log(n))
+ * - deletion: worst case O(n), average O(log(n))
+ * <p>
+ * When use:
+ * - Use when the data need to be sorted.
+ */
 public class BinarySearchTree {
     private Node root = null;
     private int size = 0;

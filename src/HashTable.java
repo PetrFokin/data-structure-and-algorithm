@@ -8,6 +8,23 @@ import java.util.stream.Collectors;
 // - write other methods?
 // - iterator
 
+/**
+ * Hash table is a abstract data structure.
+ * This data structure is based on using hash function - index for new element is counted by method hashCode.
+ * Internal class Entry is used for storage and it contains link for next element and value.
+ * If a conflict is occurred then previous element compares with new element and if method equals returns false,
+ * then link to new element is stored in Entry.
+ * <p>
+ * Complexity:
+ * - Insertion: worst O(n), average O(1)
+ * - Access: worst O(n), average O(1)
+ * - Search: worst O(n), average O(1)
+ * - Deletion: worst O(n), average O(1)
+ * <p>
+ * When use:
+ * TODO: add example
+ */
+
 public class HashTable<K, V> {
 
     private Entry<K, V>[] table;
