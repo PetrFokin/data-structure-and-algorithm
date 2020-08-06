@@ -1,16 +1,14 @@
 package algorithm;
 
+import algorithm.search.BinarySearch;
+
 import java.util.Arrays;
 
 public class Test {
 
     public static void main(String[] args) {
-        int [] arr = {2, 78, 34, 7, 0, 1024, 156, 97, 99, 13, 37};
-        int [] arr2 = {2, 2, 1};
-        InsertionSort.sort(arr);
-        QuickSort.sort(arr2, 0, arr2.length - 1);
-        System.out.println(Arrays.toString(arr));
-        System.out.println(Arrays.toString(arr2));
-
+        int [] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(BinarySearch.search(3, arr));
+        System.out.println(BinarySearch.search(-7, arr));
     }
 }
