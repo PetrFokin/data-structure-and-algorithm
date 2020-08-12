@@ -4,44 +4,43 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public static void sort(int[] arr, int left, int right) {
-        if (left < right) {
-            int med = (left + right) / 2;
-            sort(arr, left, med);
-            sort(arr, med + 1, right);
-            merge(arr, left, med, right);
+    //TODO: uderstand why it works
+    public static void sort(int[] arr, int size) {
+        if (size < 2) {
+            return;
         }
+
+        int mid = size / 2;
+        int[] l = new int[mid];
+        int[] r = new int[size - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = arr[i];
+        }
+        for (int i = mid; i < size; i++) {
+            r[i - mid] = arr[i];
+        }
+        sort(l, mid);
+        sort(r, size - mid);
+
+        merge(arr, l, r);
     }
 
-    private static void merge(int[] arr, int left, int med, int right) {
-        int[] leftArr = Arrays.copyOfRange(arr, left, med + 1);
-        int[] rightArr = Arrays.copyOfRange(arr, med + 1, right + 1);
-
-        int i = 0, j = 0;
-        for (int k = left; k <= right; k++) {
-            if (i == leftArr.length) {
-                copy(k, arr, j, rightArr);
-                break;
+    private static void merge(int[] a, int[] l, int[] r) {
+        int i = 0, j = 0, k = 0;
+        while (i < l.length && j < r.length) {
+            if (l[i] <= r[j]) {
+                a[k++] = l[i++];
             }
-
-            if (j == rightArr.length) {
-                copy(k, arr, i, leftArr);
-                break;
-            }
-
-            if (leftArr[i] < rightArr[j]) {
-                arr[k] = leftArr[i];
-                i++;
-            } else {
-                arr[k] = rightArr[j];
-                j++;
+            else {
+                a[k++] = r[j++];
             }
         }
-    }
-
-    private static void copy(int startTargetIndex, int[] targetArr, int startSourceIndex, int[] sourceArr) {
-        for (int i = startTargetIndex, j = startSourceIndex; j < sourceArr.length; i++, j++) {
-            targetArr[i] = sourceArr[j];
+        while (i < l.length) {
+            a[k++] = l[i++];
+        }
+        while (j < r.length) {
+            a[k++] = r[j++];
         }
     }
 }
