@@ -1,5 +1,16 @@
-package algorithm;
+package algorithm.sorting.interactive;
 
+/**
+ * Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+ *
+ * Time complexity:
+ *  - Best: O(n)
+ *  - Average: O(n*n)
+ *  - Worst: O(n*n)
+ *  Space complexity:
+ *  - Worst: O(1)
+ *  Stable: YES
+ */
 public class BubbleSort {
 
     public static void sort(int[] arr) {

@@ -1,11 +1,11 @@
-package algorithm;
+package algorithm.sorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static algorithm.TimSort.sort;
+import static algorithm.sorting.mix_and_complex.TimSort.sort;
 
 public class Test {
 

@@ -1,10 +1,32 @@
-package algorithm;
+package algorithm.sorting.divide_and_conquer;
 
-import java.util.Arrays;
 
+/**
+ * Merge sort is a "divide and conquer" algorithm. It divides input array in two halves, calls itself for the two halves
+ * and then merges the two sorted halves.
+ * <p>
+ * Pros:
+ * - Time-efficient with time complexity of O(n \log n)O(nlogn)
+ * - Can be used for external sorting
+ * - Highly parallelizable
+ * - Stable sort
+ * Cons:
+ * - Marginally slower than quicksort in practice
+ * -  Not as space-efficient as other sorting algorithms, e.g. block sort
+ * <p>
+ * <p>
+ * Time complexity:
+ * - Best: O(n*log n)
+ * - Average: O(n*log n)
+ * - Worst: O(n*log n)
+ * Space complexity:
+ * - Worst: O(n)
+ * Stable: YES
+ * <p>
+ * When use: when possible donate a memory because algo uses additional memory for sorting.
+ */
 public class MergeSort {
 
-    //TODO: uderstand why it works
     public static void sort(int[] arr, int size) {
         if (size < 2) {
             return;
@@ -31,8 +53,7 @@ public class MergeSort {
         while (i < l.length && j < r.length) {
             if (l[i] <= r[j]) {
                 a[k++] = l[i++];
-            }
-            else {
+            } else {
                 a[k++] = r[j++];
             }
         }

@@ -1,5 +1,8 @@
-package algorithm;
+package algorithm.sorting.mix_and_complex;
 
+/**
+ *
+ */
 public class HeapSort {
     public static void sort(int[] arr) {
         int heapSize = arr.length;

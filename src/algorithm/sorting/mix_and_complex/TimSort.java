@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.sorting.mix_and_complex;
 
 public class TimSort {
 

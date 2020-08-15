@@ -1,5 +1,18 @@
-package algorithm;
+package algorithm.sorting.divide_and_conquer;
 
+/**
+ * Quicksort is a fast sorting algorithm that takes a divide-and-conquer approach to sorting lists.
+ * The main idea is sorting recursively array to use for that pivot (in current implementation it's the last value) where
+ * values which are less than pivot are moved to the left of the pivot.
+ * <p>
+ * Time complexity:
+ * - Best: O(n*log n)
+ * - Average: O(n*log n)
+ * - Worst: O(n^2)
+ * Space complexity:
+ * - Worst: O(n)
+ * Stable: NO
+ */
 public class QuickSort {
 
     public static void sort(int[] arr, int start, int end) {
