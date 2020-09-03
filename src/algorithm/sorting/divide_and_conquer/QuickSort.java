@@ -1,5 +1,8 @@
 package algorithm.sorting.divide_and_conquer;
 
+import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Quicksort is a fast sorting algorithm that takes a divide-and-conquer approach to sorting lists.
  * The main idea is sorting recursively array to use for that pivot (in current implementation it's the last value) where
@@ -39,5 +42,15 @@ public class QuickSort {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[1000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = ThreadLocalRandom.current().nextInt(100);
+        }
+
+        sort(arr, 0, arr.length -1);
+        System.out.println(Arrays.toString(arr));
     }
 }
