@@ -18,7 +18,11 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class QuickSort {
 
-    public static void sort(int[] arr, int start, int end) {
+    public static void sort(int[] arr) {
+        sort(arr, 0, arr.length - 1);
+    }
+
+    private static void sort(int[] arr, int start, int end) {
         if (start < end) {
             int r = partition(arr, start, end);
             sort(arr, start, r - 1);
@@ -26,6 +30,10 @@ public class QuickSort {
         }
     }
 
+    /**
+     * The main idea is to move all values which less or equal than pivot as left as possible and after that move pivot
+     * in the end of left element
+     */
     private static int partition(int[] arr, int start, int end) {
         int pivot = end;
         int i = start - 1;
@@ -50,7 +58,7 @@ public class QuickSort {
             arr[i] = ThreadLocalRandom.current().nextInt(100);
         }
 
-        sort(arr, 0, arr.length -1);
+        sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
