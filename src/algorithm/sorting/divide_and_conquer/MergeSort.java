@@ -1,6 +1,9 @@
 package algorithm.sorting.divide_and_conquer;
 
 
+import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  * Merge sort is a "divide and conquer" algorithm. It divides input array in two halves, calls itself for the two halves
  * and then merges the two sorted halves.
@@ -63,5 +66,14 @@ public class MergeSort {
         while (j < r.length) {
             a[k++] = r[j++];
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[1000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = ThreadLocalRandom.current().nextInt(100);
+        }
+        sort(arr, arr.length);
+        System.out.println(Arrays.toString(arr));
     }
 }

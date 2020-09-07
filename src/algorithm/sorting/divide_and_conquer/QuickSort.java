@@ -15,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Space complexity:
  * - Worst: O(n)
  * Stable: NO
+ * Cons: when array contains a lot of duplicates then algo has poor performance
  */
 public class QuickSort {
 
