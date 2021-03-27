@@ -1,4 +1,4 @@
-package algorithm.sorting.interactive;
+package algorithm.sorting.iterative;
 
 /**
  * Insertion sort is a simple sorting algorithm. The array is virtually split into a sorted and an unsorted part.
@@ -15,13 +15,19 @@ package algorithm.sorting.interactive;
  * When use: when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).
  */
 public class InsertionSort {
+
+    public static void main(String[] args) {
+        var array = new int[] {7, 1, 5, 6, 0, 2};
+        sort(array);
+    }
+
     public static void sort(int[] arr) {
         if (arr.length <= 1)
             throw new IllegalArgumentException("The array must have more than one elements");
         for (int i = 1; i < arr.length; i++) {
             int unsortedElement = arr[i];
             int j = i;
-            while (j > 0 && arr[j - 1] > unsortedElement) {
+            while (j > 0 && unsortedElement < arr[j - 1]) {
                 swap(arr, j - 1, j);
                 j--;
             }

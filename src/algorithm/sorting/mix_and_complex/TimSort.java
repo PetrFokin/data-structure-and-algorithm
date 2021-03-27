@@ -1,5 +1,8 @@
 package algorithm.sorting.mix_and_complex;
 
+/**
+ * TODO: add description
+ */
 public class TimSort {
 
     public static void sort(int[] arr) {

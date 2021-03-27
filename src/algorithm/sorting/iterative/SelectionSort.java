@@ -1,4 +1,4 @@
-package algorithm.sorting.interactive;
+package algorithm.sorting.iterative;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -13,9 +13,9 @@ import java.util.concurrent.ThreadLocalRandom;
  * In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.
  *
  * Time complexity:
- * - Best: O(n*n)
- * - Average: O(n*n)
- * - Worst: O(n*n)
+ * - Best: O(n^2)
+ * - Average: O(n^2)
+ * - Worst: O(n^2)
  * Space complexity:
  * - Worst: O(1)
  * Stable: NO (only in implementation with linkedlist)

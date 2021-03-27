@@ -1,12 +1,12 @@
-package algorithm.sorting.interactive;
+package algorithm.sorting.iterative;
 
 /**
  * Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
  *
  * Time complexity:
  *  - Best: O(n)
- *  - Average: O(n*n)
- *  - Worst: O(n*n)
+ *  - Average: O(n^2)
+ *  - Worst: O(n^2)
  *  Space complexity:
  *  - Worst: O(1)
  *  Stable: YES
