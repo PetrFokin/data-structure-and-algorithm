@@ -1,15 +1,17 @@
 package algorithm.sorting.iterative;
 
+import java.util.Arrays;
+
 /**
  * Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
- *
+ * <p>
  * Time complexity:
- *  - Best: O(n)
- *  - Average: O(n^2)
- *  - Worst: O(n^2)
- *  Space complexity:
- *  - Worst: O(1)
- *  Stable: YES
+ * - Best: O(n)
+ * - Average: O(n^2)
+ * - Worst: O(n^2)
+ * Space complexity:
+ * - Worst: O(1)
+ * Stable: YES
  */
 public class BubbleSort {
 
@@ -28,5 +30,11 @@ public class BubbleSort {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 100, 7, 3, 11, -4};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

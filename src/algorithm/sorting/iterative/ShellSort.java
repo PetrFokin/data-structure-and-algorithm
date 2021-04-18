@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * <p>
  * Time complexity (Knuth's increment sequence):
  * - Best: O(n)
- * - Average: O(n^3/2) ???
+ * - Average: O(n^3/2)
  * - Worst: O(n^3/2)
  * Space complexity:
  * - Worst: O(1)
